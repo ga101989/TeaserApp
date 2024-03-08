@@ -30,6 +30,7 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
   late AnimationController _controller;
   bool _isPlaying = false;
   bool _isCommentSectionVisible = false;
+  bool _isFavoriteSelected = false;
   //int _currentSoundIndex = 0;
 
   final List<Sound> sounds = [
@@ -272,8 +273,12 @@ class _MenuPageState extends State<MenuPage> with SingleTickerProviderStateMixin
                       color: Colors.white,
                     ),
                     child: IconButton(
-                      icon: const Icon(Icons.favorite, size: 40, color: Colors.teaserO),
-                      onPressed: () {},
+                        icon: Icon(Icons.favorite, size: 40, color: _isFavoriteSelected ? Colors.red : Colors.teaserO),
+                      onPressed: () {
+                        setState(() {
+                          _isFavoriteSelected = !_isFavoriteSelected;
+                        });
+                      },
                     ),
                   ),
                   Expanded(child: Container()),

@@ -4,10 +4,13 @@ import 'package:flutter/services.dart';
 //import 'login.dart';
 import 'menu.dart'; // Importez le fichier de menu.dart
 //import 'package:flutter_native_splash/flutter_native_splash.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() async{
+Future<void> main() async {
   //WidgetsFlutterBinding.ensureInitialized();
+  //await Firebase.initializeApp();
   //await Firebase.initializeApp();
   runApp(const MyApp());
 }
